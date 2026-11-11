@@ -70,6 +70,22 @@ Open the local URL displayed in your terminal, usually:
 
 http://localhost:5173/
 
+### Environment Variable Setup
+
+RecipeFinder uses TheMealDB API to retrieve recipe information.
+
+1. Create a `.env` file in the root directory of the project.
+2. Add the following environment variable:
+
+   ```env
+   VITE_MEALDB_API_KEY=1
+   ```
+
+3. Save the file.
+4. Restart the development server.
+
+**Note:** TheMealDB's public test API key (`1`) is used for this project. The `.env` file is excluded from Git, while `.env.example` is included as a configuration template.
+
 ## Available Commands
 
 | Command | Description |

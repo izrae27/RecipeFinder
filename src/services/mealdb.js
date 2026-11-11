@@ -1,8 +1,14 @@
 
-const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
+const API_KEY = import.meta.env.VITE_MEALDB_API_KEY;
+
+const BASE_URL = `https://www.themealdb.com/api/json/v1/${API_KEY}`;
 
 // Reusable function for sending API requests
 async function fetchData(endpoint) {
+  if (!API_KEY) {
+    throw new Error("TheMealDB API key is missing. Check your .env file.");
+  }
+
   const response = await fetch(`${BASE_URL}/${endpoint}`);
 
   if (!response.ok) {
