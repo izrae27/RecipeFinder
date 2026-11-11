@@ -6,7 +6,6 @@ function Layout() {
     <div className="app">
       <header className="navbar">
         <Link to="/" className="brand">
-          <span className="brand-icon">🍳</span>
           RecipeFinder
         </Link>
 
